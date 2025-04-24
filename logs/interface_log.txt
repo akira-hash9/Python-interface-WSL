@@ -1,0 +1,21 @@
+[2025-04-24 07:39:24] [EXECUTANDO] ativarwsl.exe...
+
+[2025-04-24 07:39:25] [FINALIZADO] ativarwsl.exe (código 0)
+
+[2025-04-24 07:40:36] [EXECUTANDO] ativarwsl.exe...
+
+[2025-04-24 07:40:37] [FINALIZADO] ativarwsl.exe (código 0)
+
+[2025-04-24 07:40:41] [EXECUTANDO] desativarwsl.exe...
+
+[2025-04-24 07:40:42] [FINALIZADO] desativarwsl.exe (código 0)
+
+[2025-04-24 07:40:45] [EXECUTANDO] pythonnoupdate.exe...
+
+[2025-04-24 07:40:45] Traceback (most recent call last):
+[2025-04-24 07:40:45] File "pythonnoupdate.py", line 42, in <module>
+[2025-04-24 07:40:45] File "pythonnoupdate.py", line 21, in desativar_windows_update
+[2025-04-24 07:40:45] File "encodings\cp1252.py", line 19, in encode
+[2025-04-24 07:40:45] UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>
+[2025-04-24 07:40:47] [FINALIZADO] pythonnoupdate.exe (código 1)
+

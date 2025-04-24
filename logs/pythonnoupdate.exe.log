@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+File "pythonnoupdate.py", line 42, in <module>
+File "pythonnoupdate.py", line 21, in desativar_windows_update
+File "encodings\cp1252.py", line 19, in encode
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 0-1: character maps to <undefined>

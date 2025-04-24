@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Python-interfaceWSL
 
 Interface gráfica em Python com execução de scripts automatizados (.exe) no Windows, projetada para facilitar o controle de serviços WSL e automações pessoais.
@@ -41,5 +39,4 @@ pyinstaller --onefile --windowed --add-data "executers;executers" main_interface
 Criado por Akira (Felipe) | Projeto de automação pessoal de interface com controles de serviços.
 
 =======
-# Python-interface-WSL
->>>>>>> c25fd670a9646b77ca94e1669b1543a586d865f4
+

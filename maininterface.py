@@ -5,14 +5,11 @@ import threading
 import os
 from datetime import datetime
 
-# Caminho da pasta com os executáveis
 EXEC_PATH = os.path.join(os.path.dirname(__file__), "executers")
 
-# Caminho da pasta de logs
 LOG_DIR = os.path.join(os.path.dirname(__file__), "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 
-# --- Funções ---
 def run_script(script_name):
     script_path = os.path.join(EXEC_PATH, script_name)
 
@@ -31,7 +28,6 @@ def run_script(script_name):
             text=True
         )
 
-        # Caminho do log por script
         script_log_path = os.path.join(LOG_DIR, f"{script_name}.log")
         with open(script_log_path, "a", encoding="utf-8") as script_log:
             for line in process.stdout:
@@ -49,13 +45,11 @@ def log(message):
     timestamp = datetime.now().strftime("[%Y-%m-%d %H:%M:%S]")
     full_message = f"{timestamp} {message}"
 
-    # Exibe na interface
     terminal.configure(state="normal")
     terminal.insert(tk.END, full_message + "\n")
     terminal.see(tk.END)
     terminal.configure(state="disabled")
 
-    # Salva no log geral
     log_file_path = os.path.join(LOG_DIR, "interface_log.txt")
     with open(log_file_path, "a", encoding="utf-8") as f:
         f.write(full_message + "\n")
@@ -65,17 +59,14 @@ def limpar_logs():
     terminal.delete("1.0", tk.END)
     terminal.configure(state="disabled")
 
-# --- INTERFACE GRÁFICA ---
 root = tk.Tk()
 root.title("Painel de Scripts WSL")
 root.geometry("650x500")
-root.configure(bg="#1e1e2f")  # Fundo preto com roxo escuro
+root.configure(bg="#1e1e2f")  
 
-# Frame para os botões
 frame = tk.Frame(root, bg="#1e1e2f")
 frame.pack(pady=20)
 
-# Botões personalizados
 botao_style = {
     "bg": "#6a0dad",      # Roxo
     "fg": "white",        # Texto branco
@@ -88,7 +79,6 @@ botao_style = {
     "cursor": "hand2"
 }
 
-# Nomes fixos
 scripts = [
     ("Ativar WSL", "ativarwsl.exe"),
     ("Desativar WSL", "desativarwsl.exe"),
@@ -98,10 +88,8 @@ scripts = [
 for label, filename in scripts:
     tk.Button(frame, text=label, command=lambda f=filename: run_script(f), **botao_style).pack(pady=5)
 
-# Botão de limpar
 tk.Button(root, text="🧹 Limpar Logs", command=limpar_logs, **botao_style).pack(pady=10)
 
-# Terminal embutido
 terminal = scrolledtext.ScrolledText(root, height=15, state="disabled", font=("Courier", 10), bg="#2d2d3a", fg="white", insertbackground="white")
 terminal.pack(fill=tk.BOTH, padx=10, pady=10, expand=True)
 

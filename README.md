@@ -40,3 +40,6 @@ Criado por Akira (Felipe) | Projeto de automação pessoal de interface com cont
 
 =======
 
+
+É um projeto antigo que salvou a minha vida por muito tempo por conta do meu OS, vou atualizar de acordo com as minhas necessidades.
+
